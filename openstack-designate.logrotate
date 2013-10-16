@@ -1,0 +1,13 @@
+compress
+
+/var/log/designate/*.log {
+    rotate 15
+    size 1M
+    weekly
+    dateext
+    missingok
+    notifyempty
+    su openstack-designate openstack-designate
+    copytruncate
+    sharedscripts
+}
